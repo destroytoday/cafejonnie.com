@@ -1,0 +1,100 @@
+@import "compass/reset"
+@import "susy"
+
+$brown: #7D604A
+$dark-brown: #725744
+$beige: #E0CAA3
+$white: #FFF
+
+$browser-context: 16
+$total-columns: 9
+
+@function em($pixels, $context: $browser-context)
+  @return #{$pixels/$context}em
+
+=condensed-font
+  font-family: "proxima-nova-alt-ext-cond", sans-serif
+  font-weight: 300
+  text-transform: uppercase
+
+=light-font
+  font-family: "brandon-grotesque", sans-serif
+  font-weight: 100
+  text-transform: uppercase
+
+=serif-font
+  font-family: "jubilat", serif
+  font-weight: 400
+
+=serif-light-font
+  font-family: "jubilat", serif
+  font-weight: 200
+
+*
+  box-sizing: border-box
+
+.wf-loading .webfont
+  visibility: hidden
+
+html
+  background-color: $dark-brown
+
+html, body
+  width: 100%
+  overflow-x: hidden
+
+body
+  font-family: "Helvetica Neue", Helvetica, sans-serif
+  background-color: $brown
+  color: $white
+  font-size: em(16)
+  border: solid em(12) $dark-brown
+
+h1
+  +light-font
+  font-size: em(64)
+  line-height: em(16)
+  text-align: center
+  margin-bottom: em(8)
+
+h2
+  +condensed-font
+  font-size: em(24)
+  line-height: em(16)
+  text-align: center
+  margin-bottom: em(8)
+  color: $beige
+
+h3
+  +serif-font
+  font-size: em(48)
+  line-height: em(16)
+  text-align: center
+  margin-bottom: em(4)
+
+h4
+  +serif-font
+  font-weight: 200
+  font-size: em(24)
+  line-height: em(18)
+  text-align: center
+  letter-spacing: em(1)
+  margin-bottom: em(12)
+
+p
+  font-size: em(16)
+  line-height: em(20)
+  margin-bottom: em(16)
+  -webkit-font-smoothing: antialiased
+  text-align: center
+  max-width: em(512)
+  margin: 0 auto
+
+section
+  border-top: solid em(2) $dark-brown
+  padding-top: em(36)
+  margin-bottom: em(36)
+
+.page
+  +container
+  padding: em(32) em(16)
